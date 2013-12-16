@@ -21,7 +21,6 @@ namespace PosterManagementServicePrototype
             }
         }
 
-
         public void CreatePoster(Models.Poster poster)
         {
             using (var context = new PosterManagementServicePrototype.Models.PosterManagementContext())

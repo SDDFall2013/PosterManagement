@@ -24,7 +24,7 @@ namespace PosterManagementServicePrototype
 
         [OperationContract]
         [WebInvoke(Method = "POST",
-                    BodyStyle = WebMessageBodyStyle.WrappedRequest,
+                    BodyStyle = WebMessageBodyStyle.Bare,
                     RequestFormat = WebMessageFormat.Json,
                     ResponseFormat = WebMessageFormat.Json,
                     UriTemplate = "/CreatePoster")]

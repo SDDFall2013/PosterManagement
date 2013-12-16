@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@section Scripts{
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $('#getPosters').click(function (e) {
+                $.ajax({
+                    url: 'http://sdddev.cloudapp.net/PosterServicePrototype/Service.svc/GetPosters',
+                    dataType: 'text',
+                    success: function (data) {
+                        debugger;
+                        $('#output').empty().html(JSON.stringify(data));
+                    },
+                    error: function (j, s, d) {
+                        debugger;
+                        window.alert('whoops');
+                    },
+                    jsonp: 'callback'
+                });
+            });
+        });
+    </script>
+}
+
+<button id="getPosters">Get Posters</button>
+<div id="output">
+
+</div>
+<div id="create">
+    
+</div>
